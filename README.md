@@ -1,51 +1,50 @@
-# SafeStep - Women Safety App
+# SafeStep - Women Safety App (Guardian Angel)
 
 ## Overview
-SafeStep (Guardian Angel) is a comprehensive women safety mobile application built with Flutter (cross-platform) and Node.js backend. It provides real-time safety features including SOS alerts, live location sharing, fake calls, activity monitoring, emergency contacts, and more.
+SafeStep is a comprehensive women safety mobile app built with Flutter (cross-platform) and Node.js/Express/MongoDB backend. Features real-time SOS alerts, live location sharing, fake calls, shake-to-alert, AI activity monitoring, emergency contacts, safe journey tracking, Rakshak mode, and more.
 
-## Key Features
-- **SOS/Panic Button**: Instant alerts with location, audio/video evidence collection.
-- **Live Tracking/Share Location**: Real-time GPS sharing with guardians/contacts.
-- **Fake Call**: Emergency fake incoming call to escape situations.
-- **Shake-to-Activate SOS**: Hardware shake gesture trigger.
-- **Safe Journey Mode**: Auto-alert if journey deviates or takes too long.
-- **Activity Detection**: Monitors walking/running patterns.
-- **Emergency Contacts**: Quick dial/SMS to predefined contacts.
-- **Rakshak Mode**: Guardian mode for monitoring others.
-- **Evidence Recording**: Auto-record audio/video during SOS.
-- **Backend API**: User auth, location tracking, alerts, concerns logging.
-- **Push Notifications**: FCM integration.
-- **AI Analysis**: Basic anomaly detection.
+## Features
+### Frontend (Flutter)
+- **SOS Panic Button & Shake SOS**: Instant alerts with location, photo/video evidence.
+- **Live Tracking & Share Live**: Real-time GPS sharing with guardians.
+- **Fake Call**: Emergency fake incoming call screen.
+- **Safe Journey**: Auto-alert if deviation/stop.
+- **Rakshak Mode**: Guardian dashboard for monitoring.
+- **Activity Detection**: AI/ML detects falls/unusual activity.
+- **Emergency Contacts**: Quick SMS/Call + auto-alerts.
+- **Protection Timer, Helpline Directory, Safety Tips, Women Council**.
+- FCM push notifications, background service.
+
+### Backend (Node.js/Express/MongoDB)
+- User auth (JWT).
+- SOS alerts, live locations, evidence upload.
+- Journeys, activity logs, concerns reporting.
+- Socket.io for real-time.
 
 ## Tech Stack
-- **Frontend**: Flutter/Dart, Google Maps, Camera, Sensors, Permissions.
-- **Backend**: Node.js/Express, MongoDB (Mongoose models), Socket.io.
-- **Services**: FCM, Geolocator, Background services.
+- **Frontend**: Flutter 3.x, Geolocator, Camera, Sensors+, Firebase Messaging, Google Maps, TensorFlow Lite (AI).
+- **Backend**: Node.js, Express, Mongoose, Socket.io, Multer (media), FCM.
+- Database: MongoDB.
 
-## Project Structure
+## Quick Setup
+### Backend
 ```
-.
-├── guardian_angel_flutter/     # Flutter app
-│   ├── lib/                    # Dart source
-│   ├── android/                # Android config
-│   ├── pubspec.yaml
-│   └── ...
-├── guardian_angel_backend/     # Node.js API
-│   ├── models/                 # Mongoose schemas
-│   ├── controllers/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
-├── README.md
-├── SETUP_GUIDE.md
-└── ...
+cd guardian_angel_backend
+npm install
+npm start
 ```
 
-## Quick Start
-See [COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md), [QUICK_START.md](QUICK_START.md)
+### Frontend
+```
+cd guardian_angel_flutter
+flutter pub get
+flutter run
+```
+
+See [COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md), [BACKEND_INTEGRATION.md](BACKEND_INTEGRATION.md).
 
 ## Screenshots/Demo
-(Coming soon)
+See [PROJECT_COMPLETION_SUMMARY.md](PROJECT_COMPLETION_SUMMARY.md).
 
 ## License
 MIT
